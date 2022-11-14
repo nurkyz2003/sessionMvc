@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Title</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{save}" th:object="${newHouse}">
+    <div class="mb-3">
+        <label for="exampleInputName" class="from-label">Name</label>
+        <input type="text" class="from-control" id="exampleInputName" aria-describedby="emailHelp" th:field="*{name}">
+        <div id="emailHelp" class="form-text"></div>
+    </div>
+    <div class="mb-3">
+        <label for="image" class="from-label">image</label>
+        <input type="text" class="from-control" id="image" th:field="*{image}">
+    </div>
+    <div class="mb-3">
+        <label for="price" class="from-label">price</label>
+        <input type="text" class="from-control" id="price" th:field="*{price}">
+    </div>
+    <div class="mb-3">
+        <label for="description" class="from-label">description</label>
+        <input type="text" class="from-control" id="description" th:field="*{description}">
+    </div>
+    <div class="mb-3">
+        <label for="address" class="from-label">address</label>
+        <input type="text" class="from-control" id="address" th:field="*{address}">
+    </div>
+    <div class="mb-3">
+    <label for="person" class="from-label">person</label>
+    <input type="text" class="from-control" id="person" th:field="*{person}">
+</div>
+    <button type="submit" class="btn btn-primary">SAVE</button>
+</form>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</body>
+</html>
